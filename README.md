@@ -1,6 +1,15 @@
 # 컴퓨터공학과 게시판
 
 > 실제 이용자 : 실제로 사람들한테 공유해서 (에타)
+## 기술 스택
+
+>Back End : Spring Boot
+
+>Front End : Vue
+
+>DB : MySQL
+
+>Server : Tomcat
 
 ## 구현할 것들
 

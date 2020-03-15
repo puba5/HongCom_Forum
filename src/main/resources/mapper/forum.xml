@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--{forum
+		id int PK
+		title varchar(45)
+		contents varchar(100)
+		writer varchar(45)
+		date datetime
+		like int
+}-->
+<mapper namespace="io.psol.hongcom_forum.DAO.ForumDao">
+
+    <select id="getForum" resultType="io.psol.hongcom_forum.model.ForumModel">
+		select * from forum
+	</select>
+
+	<insert id="create" parameterType="io.psol.hongcom_forum.model.ForumModel">
+		insert into forum(id, title, contents, writer, date, like) value(#{id}, #{title}, #{contents}, #{writer}, sysdate(), 0)
+	</insert>
+
+</mapper>
