@@ -8,11 +8,12 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@RestController
+@Controller
 public class ForumController {
 
     @Autowired
@@ -20,23 +21,15 @@ public class ForumController {
 
     @RequestMapping("/")
     public String init() {
-        return "Hellow, world!";
+        return "init";
     }
 
     @RequestMapping("/list")    // URL 주소
-    public List<ForumModel> list() throws Exception {
-        List<ForumModel> forum = forumService.printForum();
-
-        return forum;
-    }
-    /*          이렇게하면 모델로 보내짐
-    @ResponseBody
     public ModelAndView list() throws Exception {
         List<ForumModel> forum = forumService.printForum();
 
         return new ModelAndView("list", "forum", forum);
     }
-    */
 
 
 }
