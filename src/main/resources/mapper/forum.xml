@@ -3,11 +3,11 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <!--{forum
-		id int PK
-		title varchar(45)
-		contents varchar(100)
-		writer varchar(45)
-		date datetime
+		id int PK,
+		title varchar(45),
+		contents varchar(100),
+		writer varchar(45),
+		date datetime,
 		like int
 }-->
 <mapper namespace="io.psol.hongcom_forum.DAO.ForumDao">

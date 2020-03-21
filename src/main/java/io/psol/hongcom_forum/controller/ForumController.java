@@ -19,17 +19,16 @@ public class ForumController {
     @Autowired
     ForumService forumService;
 
-    @RequestMapping("/")
+    // @RequestMapping("/")
     public String init() {
-        return "init";
+        return "index";
     }
 
-    @RequestMapping("/list")    // URL 주소
+    @RequestMapping("/list") // URL 주소
     public ModelAndView list() throws Exception {
         List<ForumModel> forum = forumService.printForum();
 
         return new ModelAndView("list", "forum", forum);
     }
-
 
 }
